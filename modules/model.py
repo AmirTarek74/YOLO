@@ -105,10 +105,3 @@ class YOLOv1(nn.Module):
                 nn.Linear(4096,S*S*(C+B*5)),               
                 )
 
-
-model = YOLOv1(split_size=7,num_boxes=2,num_classes=20)
-x= torch.rand((2,3,448,448))
-print(model(x).shape)
-
-
-print(torch.__version__)
